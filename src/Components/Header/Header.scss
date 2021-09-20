@@ -1,0 +1,184 @@
+.header{
+    background-color: #0a0a0a;
+    padding:40px 0;
+    z-index: 999;
+    position: relative;
+    //TOP
+    &__top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding:0 30px;
+        &__social{
+            display: flex;
+            align-items: center;         
+            &__icon{
+                &:not(:last-child){
+                    margin-right:20px;
+                }     
+                & > .MuiSvgIcon-root{
+                    cursor: pointer;
+                    color:#fff;
+                    font-size:1.2rem;
+                    transition: transform 0.4s;
+                    &:hover{
+                        color:#E5BF4A;
+                        transform: rotateY(-180deg);
+                    }
+                }
+            }
+        }
+        //LOGO
+        &__logo{
+            cursor: pointer;
+            img{
+                width:100%;
+                height:100%;
+                object-fit: cover;
+            }
+        }
+        //INFO
+        &__info{
+            a{
+                text-decoration: none;
+                color:#E5BF4A;
+                font-size:0.9rem;
+                text-transform: capitalize;
+                font-family: Arial, Helvetica, sans-serif;
+                
+                padding:15px;
+                border:1px solid #E5BF4A;
+                transition: all .4s;
+                &:hover{
+                    background-color: #E5BF4A;
+                    color:#fff;
+                }
+            }
+        }
+    }
+    //BOTTOM
+    &__bottom{
+        padding:30px 96px 20px 0px;
+        &__bottom{
+            display: none;
+        }
+        &__nav{
+            &__list{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-transform: uppercase;
+                &__item{
+                    margin:0 14px;
+                    &__link{
+                        color:#fff;
+                        text-decoration: none;
+                        font-size:1rem;
+
+                        padding:20px 7px;
+                        transition: all .5s;
+
+                        position: relative;
+                        &:hover{
+                            color:#E5BF4A;
+                        }
+                        &:hover::after{
+                            width:100%;
+                        }
+                        &::after{
+                            content: '';
+                            width:0;
+                            height: 1px;
+                            background-color: #E5BF4A;
+                            transition: all .5s;
+                            
+                            position: absolute;
+                            bottom: 0;
+                            left:0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:980px) {
+    .header{
+        &__top{
+            &__info{
+                display: none;
+            }
+        }
+        &__bottom{
+            padding:0;
+            overflow: hidden;
+            &__nav{
+                background-color: #555554;
+                &__menu{
+                    width:100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    background:#555554;
+                    color:#fff;
+                    padding:10px 0;
+
+                    text-align: right;
+                    p{
+                        margin-right:5px;
+                        color: #fff;
+                        font-weight: 700;
+                        text-shadow: 0 1px 3px #000;
+                    }
+                    &__button{
+                        display: flex;
+                        align-items: center;
+                        background-color: #111;
+                        border-radius: 10px;
+                        padding:5px 15px;
+                        margin-right:10px;
+                    }
+                }
+                .openNav{
+                    display: none;
+                  
+                }
+                &__list{
+                    // display: none;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    
+                    animation: listMenu 0.3s 0s 1 alternate;
+                    transition: all .5s;
+                    padding-bottom: 20px;
+                    text-transform: capitalize;
+                   
+                    &__item{
+                        margin:10px;
+                    }
+                }
+            }
+       
+        }
+    }
+}
+@media screen and (max-width:420px) {
+    .header{
+        &__top{
+            &__social{
+                display: none;
+            }
+        }
+    }
+}
+//ANIMATION
+@keyframes listMenu {
+    0%{
+        transform: translateY(-100px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}

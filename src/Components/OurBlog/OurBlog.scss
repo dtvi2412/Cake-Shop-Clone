@@ -1,0 +1,122 @@
+.blog{
+    padding:40px 0;
+    &__title{
+        width:80%;
+        margin: 0 auto;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        h1{
+            color:rgb(158, 158, 158);
+            font-weight: 100;
+            font-size:2rem;
+            font-family: "Poiret One",cursive;
+
+        }
+        button{
+            padding:15px 35px;
+            font-size:1.1rem;
+            font-weight: 100;
+            font-family: "Poiret One",cursive;
+            
+            text-transform: uppercase;
+
+            background-color: #E5BF4A;
+            color:#111;
+            cursor: pointer;
+            border:1px solid #E5BF4A;
+            transition: all .5s;
+
+            &:hover{
+                background-color: #000000;
+                color:#E5BF4A;
+                border:1px solid #E5BF4A;
+            }
+        }
+    }
+    &__card{
+        display: flex;
+        align-items: center;
+        margin-top: 100px;
+        &__item{
+            display: flex;
+            margin-left:10px;
+            img{
+                width:100%;
+                height:100%;
+                object-fit: cover;
+            }
+            &__text{
+                padding:40px 20px 20px 20px;
+                border:1px solid rgb(68, 68, 68);
+                h1{
+                    color:#d3b046;
+                    font-size:1.3rem;
+                    font-weight: 300;
+                    font-family: "Poiret One",cursive;
+                }
+                p{
+                    color:#ccc;
+                    margin:20px 0 30px 0;
+                    font-size:1.1rem;
+                    line-height: 1.3rem;
+                }
+                a{
+                    text-decoration: none;
+                    color:#c7a53e;
+                    text-transform: uppercase;
+                    font-family: "Poiret One",cursive;
+
+                    font-weight: 100;
+                    font-size:0.8rem;
+
+                    border-bottom: 2px solid #E5BF4A;
+                    padding-bottom: 10px;
+
+                    transition: all .5s;
+                    &:hover{
+                        letter-spacing: 1px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:1340px) {
+    .blog{
+        &__card{
+            flex-direction: column;
+        }
+    }
+}
+@media screen and (max-width:715px) {
+    .blog{
+        width: 80%;
+        margin:0 auto;
+        &__card{
+            flex-direction: column;
+            &__item{
+                flex-direction: column;
+                margin:20px 0;
+            }
+        }
+    }
+}
+@media screen and (max-width:415px) {
+    .blog{
+        &__title{
+            flex-direction: column;
+            button{
+                padding:5px 20px;
+                margin:20px 0;
+            }
+        }
+        &__card{
+         
+            &__item{
+              
+            }
+        }
+    }
+}

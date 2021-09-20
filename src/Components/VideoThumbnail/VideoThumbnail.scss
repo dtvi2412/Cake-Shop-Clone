@@ -1,0 +1,31 @@
+.video{
+
+}
+#videoa{
+  width:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+@media screen and (max-width:900px) {
+  #videoa{
+    #youtubea{
+      width:500px;
+    }
+  }
+}
+@media screen and (max-width:580px) {
+  #videoa{
+    #youtubea{
+      width:350px;
+    }
+  }
+}
+@media screen and (max-width:380px) {
+  #videoa{
+    #youtubea{
+      width:200px;
+      height: 200px;
+    }
+  }
+}

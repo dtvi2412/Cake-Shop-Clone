@@ -1,0 +1,70 @@
+.slider{
+    // width:100%;
+    // height: 100%;
+    // background-size: cover;
+    // background-position: center;
+    overflow: hidden;
+    &__bgImage{
+        width:100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    &__text{
+        position: absolute;
+        bottom:10%;
+        left:10%;
+
+        font-weight: 100;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        h1{
+            font-size:4.5rem;
+            color:#fff;
+        }
+    
+    }
+    &__order{
+        text-decoration: none;
+        padding:20px 30px;
+        color:#111;
+        background-color: #E5BF4A;
+
+        position: absolute;
+        left:10%;
+        bottom: 0%;
+        font-size:1rem;
+        font-weight: 200;
+        border:1px solid #E5BF4A;
+        transition: all .4s;
+        &:hover{
+            color:#E5BF4A;
+            background-color: #111;
+        }
+    }
+}
+@media screen and (max-width:980px) {
+    .slider{
+        &__bgImage{
+            height: 100px;
+        }
+       &__text{
+        position: absolute;
+        bottom:30%;
+        left:10%;
+       }
+       &__order{
+        position: absolute;
+        left:10%;
+        bottom: 20%;
+       }
+    }
+}
+@media screen and (max-width:570px) {
+    .slider{
+       &__text{
+        h1{
+            font-size:3.5rem;
+        }
+       }
+
+    }
+}
